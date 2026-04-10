@@ -9,11 +9,13 @@ namespace Library
     public class BookDatabase
     {
         private List<Book> books = new List<Book>();
+       
 
         // Əlavə et
         public void Add(Book book)
         {
             books.Add(book);
+       
         }
 
         public void RemoveById(int id)

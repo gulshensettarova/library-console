@@ -8,12 +8,12 @@ namespace Library
 {
     public class Book
     {
-        public int Id;
-        public string Title;
-        public string Author;
-        public string Genre;
-        public int PublishYear;
-        public bool IsAvailable;
+         int Id;
+         string Title;
+         string Author;
+         string Genre;
+         int PublishYear;
+         bool IsAvailable;
 
 
         public int GetId() { return Id; }
@@ -24,7 +24,11 @@ namespace Library
         public bool GetIsAvailable() { return IsAvailable; }
 
         public void SetId(int id) { Id = id; }
-        public void SetTitle(string title) { Title = title; }
+        public void SetTitle(string title) {
+            if (title != null) Title = title;
+            else Console.WriteLine("basliq null ola bilmez");
+        
+        }
         public void SetAuthor(string author) { Author = author; }
         public void SetGenre(string genre) { Genre = genre; }
         public void SetPublishYear(int year) { PublishYear = year; }
